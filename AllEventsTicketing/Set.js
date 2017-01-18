@@ -81,32 +81,6 @@ function Set() {
 	   return resultList;
 	}
 
-    //union function
-    this.union = function(listA, listB) {
-
-        var resultList = new Array();
-        var dSetAtoB = this.relativeCompliment(listA,listB);
-        var dSetBtoA = this.relativeCompliment(listB,listA);
-        var midSet = this.intersection(listA,listB);
-
-        /*-------------------------------Insert your code here -------------------------------------*/
-        if (listA === null || listB === null){
-            return null;
-        }
-        // copy list A into resultList
-        for (var i=0; i<listA.length; i++) {
-            resultList.push(listA[i]);
-        }
-        resultList = resultList.concat(dSetAtoB);
-        resultList = resultList.concat(midSet);
-        resultList = resultList.concat(dSetBtoA);
-
-        /*-------------------------------Insert your code here -------------------------------------*/
-
-        return resultList;
-    }
-
-
 
 
 	this.symetricDifference = function(listA, listB) {
